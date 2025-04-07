@@ -1,0 +1,33 @@
+# Ignora o ambiente virtual
+venv/
+ENV/
+env/
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+
+# Configs do VSCode
+.vscode/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.swp
+*.swo
+
+# Arquivos criados por testes
+.coverage
+htmlcov/
+.tox/
+
+# Pasta de deploy (se for usar alguma build local)
+build/
+dist/
