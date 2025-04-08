@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado do Boletim</title>
+</head>
+<body>
+    <h1>Resultado de {{ aluno }}</h1>
+    <p>Média: {{ media }}</p>
+
+    {% if media >= 7 %}
+        <p style="color: green;">Aprovado! 🎉</p>
+    {% elif media >= 5 %}
+        <p style="color: orange;">Recuperação! ⚠️</p>
+    {% else %}
+        <p style="color: red;">Reprovado! ❌</p>
+    {% endif %}
+
+    <br><br>
+    <a href="/">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Aluno</title>
+</head>
+<body>
+  <h1>Cadastro de Aluno</h1>
+  <form method="POST">
+    <label>Nome do Aluno:</label><br>
+    <input type="text" name="nome" required><br><br>
+
+    <label>Frequência (%):</label><br>
+    <input type="number" name="frequencia" min="0" max="100" required><br><br>
+
+    <h3>Notas por Matéria (1º ao 4º bimestre)</h3>
+
+    {% for materia in ['portugues', 'matematica', 'ingles', 'fisica', 'geografia', 'quimica'] %}
+      <fieldset>
+        <legend>{{ materia.capitalize() }}</legend>
+        {% for i in range(1, 5) %}
+          <label>{{ i }}º Bimestre:</label>
+          <input type="number" name="{{ materia }}_nota{{ i }}" step="0.01" min="0" max="10" required><br>
+        {% endfor %}
+      </fieldset><br>
+    {% endfor %}
+
+    <button type="submit">Registrar Aluno</button>
+  </form>
+</body>
+</html>
